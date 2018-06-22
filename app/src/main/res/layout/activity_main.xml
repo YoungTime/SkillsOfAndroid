@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.a01378359.testapp.MainActivity">
+    <FrameLayout
+        android:id="@+id/layout_context"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <fragment
+            android:id="@+id/fra_context"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="com.example.a01378359.testapp.FirstFragment"/>
+    </FrameLayout>
+    <fragment
+        android:id="@+id/layout_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:name="com.example.a01378359.testapp.NavigationFragment"/>
+
+</LinearLayout>
