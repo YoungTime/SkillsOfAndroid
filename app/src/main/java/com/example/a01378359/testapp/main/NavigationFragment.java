@@ -1,4 +1,4 @@
-package com.example.a01378359.testapp;
+package com.example.a01378359.testapp.main;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -10,7 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Toast;
+
+import com.example.a01378359.testapp.R;
 
 /**
  * Created by 01378359 on 2018/6/15.

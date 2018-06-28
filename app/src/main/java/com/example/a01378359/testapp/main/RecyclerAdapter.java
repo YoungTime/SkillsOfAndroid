@@ -1,4 +1,4 @@
-package com.example.a01378359.testapp;
+package com.example.a01378359.testapp.main;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -6,8 +6,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.a01378359.testapp.R;
+
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -39,7 +40,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-        View view = View.inflate(context,R.layout.item_recycler,null);
+        View view = View.inflate(context, R.layout.item_recycler,null);
         MyViewHolder viewHolder = new MyViewHolder(view);
 
         return viewHolder;

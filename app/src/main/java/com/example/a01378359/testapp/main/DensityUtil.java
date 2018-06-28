@@ -1,4 +1,4 @@
-package com.example.a01378359.testapp;
+package com.example.a01378359.testapp.main;
 
 import android.content.Context;
 

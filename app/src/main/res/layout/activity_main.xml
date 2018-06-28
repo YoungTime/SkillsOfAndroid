@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.a01378359.testapp.MainActivity">
+    tools:context="com.example.a01378359.testapp.main.MainActivity">
     <FrameLayout
         android:id="@+id/layout_context"
         android:layout_width="match_parent"
@@ -15,12 +15,12 @@
             android:id="@+id/fra_context"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:name="com.example.a01378359.testapp.FirstFragment"/>
+            android:name="com.example.a01378359.testapp.main.FirstFragment"/>
     </FrameLayout>
     <fragment
         android:id="@+id/layout_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:name="com.example.a01378359.testapp.NavigationFragment"/>
+        android:name="com.example.a01378359.testapp.main.NavigationFragment"/>
 
 </LinearLayout>

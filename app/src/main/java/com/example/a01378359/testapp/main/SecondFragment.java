@@ -1,4 +1,4 @@
-package com.example.a01378359.testapp;
+package com.example.a01378359.testapp.main;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
 
+import com.example.a01378359.testapp.R;
 import com.example.a01378359.testapp.adapter.PagerAdapter;
 import com.example.a01378359.testapp.pager.FirstPager;
 import com.example.a01378359.testapp.pager.SecondPager;

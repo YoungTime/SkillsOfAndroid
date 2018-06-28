@@ -39,6 +39,17 @@ public class NineLock extends View {
 
     private Bitmap finger;
     private float rad;
+    private OnDrawFinishListener listener;
+
+    private StringBuilder builder = new StringBuilder();
+
+    public void setOnDrawFinishListener(OnDrawFinishListener listener){
+        this.listener = listener;
+    }
+
+    public interface OnDrawFinishListener{
+        public boolean finish(String password);
+    }
 
 
 
@@ -46,14 +57,17 @@ public class NineLock extends View {
 
     public NineLock(Context context) {
         super(context);
+        init();
     }
 
     public NineLock(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
+        init();
     }
 
     public NineLock(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        init();
     }
 
 
@@ -72,6 +86,7 @@ public class NineLock extends View {
             Point oldPoint = clickPoints.get(0);
 
             for (int i = 1; i < clickPoints.size(); i++) {
+                System.out.println("当前的i："+i);
                 drawLine(canvas, oldPoint, clickPoints.get(i));
                 oldPoint = clickPoints.get(i);
             }
@@ -177,12 +192,12 @@ public class NineLock extends View {
 
                     int i = position[0];
                     int j = position[1];
-                    oldPoint = new Point(i,j);
-                    clickPoints.add(oldPoint);
+                    clickPoints.add(mPoints[i][j]);
                     isDraw = true;
+                    builder.append(i);
+                    builder.append(j);
 
                     mPoints[i][j].state = Point.POINT_STATUS_CLICK;
-                    invalidate();
                 }
 
                 break;
@@ -196,6 +211,9 @@ public class NineLock extends View {
                     mPoints[position[0]][position[1]].state = Point.POINT_STATUS_CLICK;
                     if (!clickPoints.contains(mPoints[position[0]][position[1]])){
                         clickPoints.add(mPoints[position[0]][position[1]]);
+                        builder.append(position[0]);
+                        builder.append(position[1]);
+
                     }
 
                 }
@@ -205,6 +223,12 @@ public class NineLock extends View {
                 break;
             case MotionEvent.ACTION_UP:
                 isDraw = false;
+                System.out.println(builder.toString());
+                if (listener.finish(builder.toString())){
+
+                }
+
+
                 reset();
                 break;
             default:
@@ -218,9 +242,9 @@ public class NineLock extends View {
 
 
     }
-    
+
     private int[] getPosition(){
-        
+
         Point point = new Point(mX,mY);
 
         for (int i = 0; i < mPoints.length; i++) {
@@ -234,18 +258,19 @@ public class NineLock extends View {
                 }
             }
         }
-        
+
         return null;
     }
 
     private void reset(){
 
         for (Point point:
-             clickPoints) {
+                clickPoints) {
             point.state = Point.POINT_STATUS_NORMAL;
         }
         nowPoint = null;
         clickPoints.clear();
+        builder = new StringBuilder();
         invalidate();
     }
 

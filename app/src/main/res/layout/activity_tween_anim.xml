@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.a01378359.testapp.anim.TweenAnimActivity">
+
+    <ImageView
+        android:id="@+id/iv_tween"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="350dp"
+        android:src="@drawable/pig" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:id="@+id/btn_tween_alpha"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="渐变"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/btn_tween_translate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="平移"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/btn_tween_scale"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="缩放"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/btn_tween_rotate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="旋转"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/btn_tween_group"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="组合"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+</RelativeLayout>

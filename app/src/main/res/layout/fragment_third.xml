@@ -5,9 +5,15 @@
     android:orientation="vertical"
     android:background="#fff">
 
-    <com.example.a01378359.testapp.ninepoint.NineLock
-        android:id="@+id/nine_third"
+    <com.example.a01378359.testapp.lock.HandleLock
+        android:id="@+id/handle_lock"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="400dp" />
+    <com.example.a01378359.testapp.main.HandleTestView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:clickable="true"
+        android:text="测试文本"/>
 
 </LinearLayout>

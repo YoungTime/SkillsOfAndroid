@@ -1,9 +1,11 @@
-package com.example.a01378359.testapp;
+package com.example.a01378359.testapp.main;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+
+import com.example.a01378359.testapp.R;
 
 public class SecondActivity extends AppCompatActivity {
 
