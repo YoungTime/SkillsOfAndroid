@@ -11,6 +11,7 @@ import com.example.a01378359.testapp.R;
 public class AnimMainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button toTween;
+    private Button toFrame;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +23,8 @@ public class AnimMainActivity extends AppCompatActivity implements View.OnClickL
     private void initView(){
         toTween = findViewById(R.id.btn_anim_tween);
         toTween.setOnClickListener(this);
+        toFrame = findViewById(R.id.btn_anim_frame);
+        toFrame.setOnClickListener(this);
     }
 
     private void start(Class context){
@@ -35,6 +38,8 @@ public class AnimMainActivity extends AppCompatActivity implements View.OnClickL
             case R.id.btn_anim_tween:
                 start(TweenAnimActivity.class);
                 break;
+            case R.id.btn_anim_frame:
+                start(FrameAnimActivity.class);
             default:
                 break;
         }

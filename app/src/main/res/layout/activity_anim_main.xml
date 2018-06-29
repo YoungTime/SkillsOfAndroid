@@ -4,18 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.a01378359.testapp.anim.AnimMainActivity">
 
-    <LinearLayout
+
+    <Button
+        android:id="@+id/btn_anim_tween"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <Button
-            android:id="@+id/btn_anim_tween"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Tween 动画"/>
-    </LinearLayout>
+        android:text="Tween 动画" />
+
+    <Button
+        android:id="@+id/btn_anim_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Frame 动画" />
 
 </LinearLayout>

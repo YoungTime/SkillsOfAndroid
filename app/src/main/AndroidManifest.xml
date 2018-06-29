@@ -20,7 +20,8 @@
         </activity>
         <activity android:name=".fragment.FragmentActivity" />
         <activity android:name=".anim.AnimMainActivity" />
-        <activity android:name=".anim.TweenAnimActivity"></activity>
+        <activity android:name=".anim.TweenAnimActivity" />
+        <activity android:name=".anim.FrameAnimActivity"></activity>
     </application>
 
 </manifest>

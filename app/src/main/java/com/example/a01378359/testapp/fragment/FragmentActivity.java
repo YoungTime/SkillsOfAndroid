@@ -48,6 +48,7 @@ public class FragmentActivity extends AppCompatActivity implements Icom{
 
     }
 
+    // 添加 fragment
     private void addFragment(){
         Fragment fragment = new TestFragment();
         Bundle bundle = new Bundle();
@@ -55,18 +56,22 @@ public class FragmentActivity extends AppCompatActivity implements Icom{
         fragment.setArguments(bundle);
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
+        // 需要传入父布局 id 和 fragment
         transaction.add(R.id.layout_fragment_add,fragment);
         transaction.commit();
     }
 
+    // 替换 fragment
     private void replaceFragment(){
         Fragment fragment = new TestFragment();
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
+        // 需要传入父布局 id 和 fragment
         transaction.replace(R.id.layout_fragment_test,fragment);
         transaction.commit();
     }
 
+    // 设置 BackStack
     private void setBackStack(){
         Fragment fragment1 = new TestFragment();
         Fragment fragment2 = new TestFragment();
@@ -77,6 +82,7 @@ public class FragmentActivity extends AppCompatActivity implements Icom{
         FragmentTransaction transaction = manager.beginTransaction();
         transaction.add(R.id.layout_fragment_add,fragment1);
         transaction.replace(R.id.layout_fragment_test,fragment2);
+        // 添加 BackStack
         transaction.addToBackStack(null);
         transaction.commit();
     }
@@ -84,7 +90,6 @@ public class FragmentActivity extends AppCompatActivity implements Icom{
 
     @Override
     public void setCount(int count) {
-
         clickCount.setText(count+"");
     }
 }

@@ -28,9 +28,11 @@ public class TestFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_test,container,false);
+        View view = inflater.inflate(R.layout.fragment_test, container, false);
         return view;
     }
+
+
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
@@ -57,15 +59,9 @@ public class TestFragment extends Fragment {
     @Override
     public void onAttach(Activity context) {
         super.onAttach(context);
+        // 先判断 Activity 是否实现了 Icom
         if (context instanceof Icom){
             icom = (Icom) context;
-//            addCount.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View view) {
-//
-//
-//                }
-//            });
         }
     }
 }
