@@ -21,7 +21,8 @@
         <activity android:name=".fragment.FragmentActivity" />
         <activity android:name=".anim.AnimMainActivity" />
         <activity android:name=".anim.TweenAnimActivity" />
-        <activity android:name=".anim.FrameAnimActivity"></activity>
+        <activity android:name=".anim.FrameAnimActivity" />
+        <activity android:name=".lock.LockTestActivity"></activity>
     </application>
 
 </manifest>

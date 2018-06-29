@@ -8,12 +8,14 @@ import android.widget.Button;
 
 import com.example.a01378359.testapp.anim.AnimMainActivity;
 import com.example.a01378359.testapp.fragment.FragmentActivity;
+import com.example.a01378359.testapp.lock.LockTestActivity;
 import com.example.a01378359.testapp.main.MainActivity;
 
 public class FirstActivity extends AppCompatActivity implements View.OnClickListener{
     private Button toMain;
     private Button toFragment;
     private Button toAnim;
+    private Button toLock;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,8 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
         toFragment.setOnClickListener(this);
         toAnim = findViewById(R.id.btn_first_to_anim);
         toAnim.setOnClickListener(this);
+        toLock = findViewById(R.id.btn_first_to_lock);
+        toLock.setOnClickListener(this);
     }
 
     private void start(Class context){
@@ -48,6 +52,8 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
             case R.id.btn_first_to_anim:
                 start(AnimMainActivity.class);
             default:
+            case R.id.btn_first_to_lock:
+                start(LockTestActivity.class);
                 break;
 
         }

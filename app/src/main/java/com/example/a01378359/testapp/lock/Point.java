@@ -1,4 +1,4 @@
-package com.example.a01378359.testapp.ninepoint;
+package com.example.a01378359.testapp.lock;
 
 /**
  * Created by 01378359 on 2018/6/21.
@@ -14,6 +14,7 @@ public class Point {
     // 默认状态
     public int state = POINT_STATUS_NORMAL;
 
+    // 点的坐标
     public float mX;
     public float mY;
 

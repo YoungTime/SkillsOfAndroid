@@ -1,20 +1,14 @@
 package com.example.a01378359.testapp.main;
 
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.example.a01378359.testapp.R;
 import com.example.a01378359.testapp.lock.HandleLock;
-import com.example.a01378359.testapp.ninepoint.NineLock;
-import com.example.a01378359.testapp.ninepoint.Point;
-
-import java.util.List;
 
 /**
  * Created by 01378359 on 2018/6/15.
@@ -32,8 +26,9 @@ public class ThirdFragment extends Fragment {
         mHandleLock = view.findViewById(R.id.handle_lock);
         mHandleLock.setOnDrawFinishListener(new HandleLock.OnDrawFinishListener() {
             @Override
-            public void drawFinish(String route) {
+            public boolean drawFinish(String route) {
 //                if (route)
+                return false;
             }
         });
         return view;
