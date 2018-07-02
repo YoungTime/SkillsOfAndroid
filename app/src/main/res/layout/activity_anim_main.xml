@@ -12,12 +12,17 @@
         android:id="@+id/btn_anim_tween"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Tween 动画" />
+        android:text="补间动画" />
 
     <Button
         android:id="@+id/btn_anim_frame"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Frame 动画" />
+        android:text="帧动画" />
+    <Button
+        android:id="@+id/btn_anim_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="属性动画" />
 
 </LinearLayout>

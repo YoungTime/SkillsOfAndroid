@@ -12,6 +12,7 @@ public class AnimMainActivity extends AppCompatActivity implements View.OnClickL
 
     private Button toTween;
     private Button toFrame;
+    private Button toValue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +26,8 @@ public class AnimMainActivity extends AppCompatActivity implements View.OnClickL
         toTween.setOnClickListener(this);
         toFrame = findViewById(R.id.btn_anim_frame);
         toFrame.setOnClickListener(this);
+        toValue = findViewById(R.id.btn_anim_value);
+        toValue.setOnClickListener(this);
     }
 
     private void start(Class context){
@@ -40,6 +43,8 @@ public class AnimMainActivity extends AppCompatActivity implements View.OnClickL
                 break;
             case R.id.btn_anim_frame:
                 start(FrameAnimActivity.class);
+            case R.id.btn_anim_value:
+                start(ObjectAnimatorActivity.class);
             default:
                 break;
         }

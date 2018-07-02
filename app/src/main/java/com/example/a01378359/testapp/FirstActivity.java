@@ -51,9 +51,11 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
                 break;
             case R.id.btn_first_to_anim:
                 start(AnimMainActivity.class);
-            default:
+                break;
             case R.id.btn_first_to_lock:
                 start(LockTestActivity.class);
+                break;
+            default:
                 break;
 
         }
