@@ -23,7 +23,10 @@
         <activity android:name=".anim.TweenAnimActivity" />
         <activity android:name=".anim.FrameAnimActivity" />
         <activity android:name=".lock.LockTestActivity" />
-        <activity android:name=".anim.ObjectAnimatorActivity"></activity>
+        <activity android:name=".anim.ObjectAnimatorActivity" />
+        <activity android:name=".materialdesign.MaterialDesignAnimationActivity" />
+        <activity android:name=".materialdesign.TouchFeedbackActivity" />
+        <activity android:name=".notification.NotificationActivity"></activity>
     </application>
 
 </manifest>

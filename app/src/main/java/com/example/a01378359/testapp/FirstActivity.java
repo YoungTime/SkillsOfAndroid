@@ -10,12 +10,16 @@ import com.example.a01378359.testapp.anim.AnimMainActivity;
 import com.example.a01378359.testapp.fragment.FragmentActivity;
 import com.example.a01378359.testapp.lock.LockTestActivity;
 import com.example.a01378359.testapp.main.MainActivity;
+import com.example.a01378359.testapp.materialdesign.MaterialDesignAnimationActivity;
+import com.example.a01378359.testapp.notification.NotificationActivity;
 
 public class FirstActivity extends AppCompatActivity implements View.OnClickListener{
     private Button toMain;
     private Button toFragment;
     private Button toAnim;
     private Button toLock;
+    private Button toMaterialDesign;
+    private Button toNotification;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +37,10 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
         toAnim.setOnClickListener(this);
         toLock = findViewById(R.id.btn_first_to_lock);
         toLock.setOnClickListener(this);
+        toMaterialDesign = findViewById(R.id.btn_first_to_material_design);
+        toMaterialDesign.setOnClickListener(this);
+        toNotification=findViewById(R.id.btn_first_to_notification);
+        toNotification.setOnClickListener(this);
     }
 
     private void start(Class context){
@@ -54,6 +62,12 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
                 break;
             case R.id.btn_first_to_lock:
                 start(LockTestActivity.class);
+                break;
+            case R.id.btn_first_to_material_design:
+                start(MaterialDesignAnimationActivity.class);
+                break;
+            case R.id.btn_first_to_notification:
+                start(NotificationActivity.class);
                 break;
             default:
                 break;

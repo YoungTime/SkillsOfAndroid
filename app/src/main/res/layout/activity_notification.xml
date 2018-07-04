@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.a01378359.testapp.notification.NotificationActivity">
+    <Button
+        android:id="@+id/btn_notification_simple"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="简单通知"/>
+    <Button
+        android:id="@+id/btn_notification_normal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="普通通知"/>
+    <Button
+        android:id="@+id/btn_notification_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="进度条通知"/>
+    <Button
+        android:id="@+id/btn_notification_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="按钮通知"/>
+    <Button
+        android:id="@+id/btn_notification_custom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="自定义通知"/>
+
+</LinearLayout>
