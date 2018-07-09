@@ -26,7 +26,10 @@
         <activity android:name=".anim.ObjectAnimatorActivity" />
         <activity android:name=".materialdesign.MaterialDesignAnimationActivity" />
         <activity android:name=".materialdesign.TouchFeedbackActivity" />
-        <activity android:name=".notification.NotificationActivity"></activity>
+        <activity android:name=".notification.NotificationActivity" />
+        <activity android:name=".memory.MemoryActivity" />
+        <activity android:name=".eventbus.EventBusMainActivity" />
+        <activity android:name=".eventbus.SubscriberEventActivity"></activity>
     </application>
 
 </manifest>

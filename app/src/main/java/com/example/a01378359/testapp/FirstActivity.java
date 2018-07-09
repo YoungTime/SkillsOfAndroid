@@ -7,10 +7,12 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.a01378359.testapp.anim.AnimMainActivity;
+import com.example.a01378359.testapp.eventbus.EventBusMainActivity;
 import com.example.a01378359.testapp.fragment.FragmentActivity;
 import com.example.a01378359.testapp.lock.LockTestActivity;
 import com.example.a01378359.testapp.main.MainActivity;
 import com.example.a01378359.testapp.materialdesign.MaterialDesignAnimationActivity;
+import com.example.a01378359.testapp.memory.MemoryActivity;
 import com.example.a01378359.testapp.notification.NotificationActivity;
 
 public class FirstActivity extends AppCompatActivity implements View.OnClickListener{
@@ -20,6 +22,8 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
     private Button toLock;
     private Button toMaterialDesign;
     private Button toNotification;
+    private Button toMemroy;
+    private Button toEventBus;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +45,10 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
         toMaterialDesign.setOnClickListener(this);
         toNotification=findViewById(R.id.btn_first_to_notification);
         toNotification.setOnClickListener(this);
+        toMemroy = findViewById(R.id.btn_first_to_memory);
+        toMemroy.setOnClickListener(this);
+        toEventBus = findViewById(R.id.btn_first_to_event_bus);
+        toEventBus.setOnClickListener(this);
     }
 
     private void start(Class context){
@@ -69,6 +77,11 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
             case R.id.btn_first_to_notification:
                 start(NotificationActivity.class);
                 break;
+            case R.id.btn_first_to_memory:
+                start(MemoryActivity.class);
+                break;
+            case R.id.btn_first_to_event_bus:
+                start(EventBusMainActivity.class);
             default:
                 break;
 
